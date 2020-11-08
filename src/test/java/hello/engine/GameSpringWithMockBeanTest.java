@@ -38,7 +38,7 @@ public class GameSpringWithMockBeanTest {
 
     @Test
     void addPlayerTest() {
-        // dans ce tests, p1 pourrait être un mock standard
+        // dans ce test, p1 pourrait être un mock standard
         testedGame.addPlayers(p1);
         verify(mockedLogger, times(1)).log(anyString());
         verify(p1, times(1)).addObjective(any());
@@ -47,7 +47,7 @@ public class GameSpringWithMockBeanTest {
 
     @Test
     void add2PlayersTest() {
-        // dans ce tests, p1 pourrait être un mock standard -> la preuve p2 en est un
+        // dans ce test, p1 pourrait être un mock standard -> la preuve p2 en est un
         testedGame.addPlayers(p1, p2);
         verify(mockedLogger, times(2)).log(anyString());
         verify(p1, times(1)).addObjective(any());
@@ -56,7 +56,7 @@ public class GameSpringWithMockBeanTest {
 
     @Test
     void add2PlayersTestWith2StandardMocks() {
-        // dans ce tests, p1 pourrait être un mock standard -> la preuve p2 en est un
+        // dans ce test, p3 et p2 en sont deux mocks standards
         testedGame.addPlayers(p3, p2);
         verify(mockedLogger, times(2)).log(anyString());
         verify(p3, times(1)).addObjective(any());
