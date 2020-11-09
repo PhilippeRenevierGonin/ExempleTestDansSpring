@@ -14,6 +14,10 @@ public class HelloController {
         this.output = false;
     }
 
+    public void unmute() {
+        this.output = true;
+    }
+
     public String index() {
         return "Greetings from Spring Boot! "+this;
     }

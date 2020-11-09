@@ -22,17 +22,21 @@ class GameSpringTest {
 
 
     Game game;
+    HelloController logger;
 
+    // on récupère les beans ici ou en attribut avec @Autowired
     @BeforeEach
     void setUp(@Autowired Game g, @Autowired HelloController logger) {
         // se sera l'instance de l'application...
         // l'application est lancée
         this.game = g;
+        this.logger = logger;
         logger.mute(); // se répercute aussi sur les autres tests !
     }
 
     @AfterEach
     void tearDown() {
+        // logger.unmute(); // impact sur GameSpringWithMockTest
     }
 
     @Test

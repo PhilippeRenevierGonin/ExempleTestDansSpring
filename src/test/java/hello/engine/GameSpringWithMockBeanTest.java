@@ -33,6 +33,7 @@ public class GameSpringWithMockBeanTest {
     @Mock
     Player p3;
 
+    // on récupère les beans ici en attribut ou en paramètre d'un @BeforeEach
     @Autowired
     Game testedGame;
 
